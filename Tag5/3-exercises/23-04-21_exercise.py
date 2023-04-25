@@ -30,12 +30,21 @@ pydata = """id,first_name,last_name,email,ip_address
 lines = pydata.split("\n")
 print(lines)
 
+print()
+print()
+print('------------------------------')
+print()
+
 for i in range(0,len(lines),5):  #hier def ich dass i jedes 5. item  range(a=erste zeile,b=letzte zeile,c=jede c-te) ausspuckt
     print(lines[i])  # hier printe ich aus meiner itemsliste das i=jede 5.
 
+print()
+print()
+print('-------------------------------------------')
+print()
+
 
 ################# Task 2 ###################
-
 counter = 0
 
 for i in range(1,len(lines)):  
@@ -50,9 +59,16 @@ for i in range(1,len(lines)):
     ###ä TASK 3.2 ####
     if splitlines[1].startswith("K") or splitlines[2].startswith("K"):
         counter += 1
+print()
+print()
+
 print("Emails ending with .uk.com are: ", counter)
 print("There are ", counter, " Persons whose First or Last name starts with a K")
 
+print()
+print()
+print('---------------------------------')
+print()
 
 
 ################ TSAK 4 #################
@@ -62,5 +78,26 @@ for i in range(1,len(lines)):
     print(splitlines[1], splitlines[2][0] + ".," , split_splitline[0]+"."+ split_splitline[1] + ".xxx.xxx")
 
              
+print()
+print()
+print('--------------------------------')
+print()
+print()
+
 ############### OPTIONAL TASK ##################
 
+list = []
+
+for i in range(1,len(lines)):
+    splitlines = lines[i].split(",")
+    mail_split = splitlines[3].split("@")
+    mail_end = mail_split[1]
+
+    list.append(mail_end)
+
+
+print("\t Statistics for top 3 email adress domains of our users:")
+print("\t \t"  )
+print(list)
+
+# wenn str nicht gleich neuem str ist = dann neue liste hinzufügen
